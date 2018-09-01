@@ -1,0 +1,60 @@
+---
+title: "Model to predict miles per gallon using weigth,transmission mode and 1/4 mile time"
+author: "Shubhanshu Mohan Srivastava"
+date: "1 September 2018"
+output: ioslides_presentation
+---
+
+## Project objective
+
+The aim of the project is to predict the miles per gallon using weight,transmission mode and 1/4 mile time.Linear model will be used for the prediction.As a part of the project a web application will be developed to predict the miles per gallon by providing the required details.
+
+Requisites of the project:<br>
+1. mtcars dataset(available in R)<br>
+2. shiny(web framework by Rstudio)<br>
+
+
+## Data
+
+The dataset being used to train the model is mtcars dataset.
+
+```{r,echo=FALSE,comment=" "}
+data(mtcars)
+head(mtcars)
+```
+
+We can see that that the mtcars dataset is a good choice to develop a prediction model for the miles per gallon.
+
+## Plots
+
+The following decision tree will be used for prediction:
+
+```{r,echo=FALSE,cache=TRUE}
+par(mfrow=c(1,3))
+    plot(mtcars$mpg~mtcars$wt,xlab="weight",ylab="miles per gallon")
+    plot(mtcars$mpg~mtcars$qsec,xlab="1/4 mile time",ylab ="miles per gallon")
+    plot(mtcars$mpg~mtcars$am,xlab="transmission mode",ylab="miles per gallon")
+```
+
+## Functionality of the application
+
+The application will provide an interface to enter the weight,transmission mode and 1/4 mile time.These details will be used to predict the mpg of the car.
+
+The following details will be needed:
+
+1.Weight<br>
+2.Transmission mode<br>
+3.1/4 mile time<br>
+
+
+## Link to the project
+
+The web application can be found [Here](https://shubhanshu.shinyapps.io/mtcars_app/)
+
+The code for the application can be found [Here](https://github.com/shubhanshumohan/mtcars_app)
+
+
+
+
+
+
